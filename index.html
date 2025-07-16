@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Brutto/Netto-Gehaltsrechner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Gehaltsrechner – Brutto / Netto</h2>
+
+    <label for="bruttoMonat">💶 Monatliches Bruttogehalt (€):</label>
+    <input type="number" id="bruttoMonat" placeholder="z. B. 3000" />
+
+    <label for="bruttoJahr">📆 Jährliches Bruttogehalt (€):</label>
+    <input type="number" id="bruttoJahr" placeholder="z. B. 36000" />
+
+    <label for="steuerklasse">📄 Steuerklasse:</label>
+    <select id="steuerklasse">
+        <option value="1">I</option>
+        <option value="2">II</option>
+        <option value="3">III</option>
+        <option value="4">IV</option>
+        <option value="5">V</option>
+        <option value="6">VI</option>
+    </select>
+
+    <label for="familienstand">👤 Familienstand:</label>
+    <select id="familienstand">
+        <option value="ledig">Ledig</option>
+        <option value="verheiratet">Verheiratet</option>
+    </select>
+
+    <!-- Kirchensteuer -->
+    <div class="form-group">
+      <label for="kirchensteuer">🧾 Kirchensteuer:</label>
+      <select id="kirchensteuer" onchange="toggleBundesland()">
+        <option value="nein">Nein</option>
+        <option value="ja">Ja</option>
+      </select>
+    </div>
+
+    <!-- Bundesland (nur wenn Ja gewählt) -->
+    <div class="form-group" id="bundesland-container" style="display: none;">
+      <label for="bundesland">📍 Bundesland:</label>
+      <select id="bundesland">
+        <option value="">Bitte wählen</option>
+        <option value="BY">Bayern</option>
+        <option value="BW">Baden-Württemberg</option>
+        <option value="rest">Andere Bundesländer</option>
+      </select>
+    </div>
+
+    <button onclick="berechneNetto()">💡 Berechnen</button>
+
+    <div class="ergebnis">
+        <p><strong>Monatliches Netto:</strong> <span id="nettoMonat">–</span> €</p>
+        <p><strong>Jährliches Bruttogehalt:</strong> <span id="bruttoJahrOut">–</span> €</p>
+        <p><strong>Jährliches Nettogehalt:</strong> <span id="nettoJahr">–</span> €</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

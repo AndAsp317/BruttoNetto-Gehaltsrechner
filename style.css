@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 420px;
+  margin: 20px auto;
+  padding: 25px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Überschrift */
+h2 {
+  color: #2e7d32;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+select,
+input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+/* Button Berechnen */
+button {
+  background-color: #43a047;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #388e3c;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.ergebnis {
+  margin-top: 25px;
+  font-size: 18px;
+}
+
+#bundesland-container {
+  margin-top: 10px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+
+  input, select, button {
+    font-size: 1em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  .kirchensteuer-row {
+    flex-direction: row; /* oder column, wenn du sie untereinander willst */
+    align-items: flex-start;
+  }
+}

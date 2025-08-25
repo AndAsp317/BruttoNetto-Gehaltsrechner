@@ -8,7 +8,7 @@ Ein einfacher, responsiver **Brutto-/Netto‑Rechner** im Browser. Du gibst dein
 
 Die folgende Abbildung zeigt das Tool mit Beispielwerten (3.500 € brutto/Monat, Steuerklasse I, ledig, ohne Kirchensteuer):
 
-![Screenshot des Gehaltsrechners](screenshot-demo.png)
+![Screenshot des Gehaltsrechners](preview.png)
 
 ## Features
 
